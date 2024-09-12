@@ -1,11 +1,12 @@
 
 mod rk4 {
 use std::result::Result;
-use std::sync::Arc;
+use std::vec::Vec;
 
-    fn itterate( ) -> Result< std::sync::Arc<f64> , &'static str> {
+    fn itterate(dydt:fn(f64, Vec<f64>) -> Vec<f64>, Y_n:&[f64], t:f64, h:f64, m:const u8) -> Result< Vec<f64> , &'static str> {
+        let mut k = [[0f64; 4]; m];
         
-        Ok(Arc::new(12.0))
+        Ok(vec![1.0f64])
     }
 
 }
